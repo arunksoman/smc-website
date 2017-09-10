@@ -1,7 +1,10 @@
+image: "debian:stable-slim"
+
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 pages:
   script:
+  - bash update_fonts.sh
   - mkdir .public
   - cp -r * .public
   - mv .public public
