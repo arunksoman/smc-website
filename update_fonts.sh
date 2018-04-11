@@ -1,6 +1,6 @@
 mkdir -p downloads/fonts
 cd downloads/fonts
-fonts=(rachana meera manjari raghumalayalamsans dyuthi keraleeyam uroob chilanka karumbi)
+fonts=(anjali rachana meera manjari raghumalayalamsans dyuthi keraleeyam uroob chilanka karumbi)
 for font in ${fonts[@]}; do
         mkdir font
         cd font
