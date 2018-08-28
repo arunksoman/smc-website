@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        {% include head.html % }
+    </head>
+    <body>
+        {% include topbar.html %}
+        <div id="homepage">
+            <div class="wrapper" id="main-content">
+                <div class="sidebar">
+                    {% include sidebar.html %}
+                    {% include social_share.html %}
+                </div>
+                <div class="content">
+                    <div id="title">
+                        <h1>{{ page.title }}</h1>
+                    </div>
+                    <div id="about">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="wrapper">
+                    <hr/>
+                    <div id="copyleft"><span>&copy;</span> Swathanthra Malayalam Computing 2013 - All Wrongs Reversed</div>
+                </div>
+            </footer>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.i18n.min.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="localization" hreflang="en" href="i18n/smc-en.json" type="application/l10n+json"/>
+        <link rel="localization" hreflang="ml" href="i18n/smc-ml.json" type="application/l10n+json"/>
+    </body>
+
+
+    <script id="template-homepage" type="text/template">
+        <div class="wrapper" id="main-content">
+            <div class="sidebar">
+                <div id="logo">
+                    <img src="img/logo.png" />
+                </div>
+                <div id="external-links">
+			<ul id="links">
+			<li>
+                           <a href="https://blog.smc.org.in/"><%= $.i18n('menu-blog') %></a>
+			</li>
+                        <li>
+                            <a href="https://wiki.smc.org.in/"><%= $.i18n('menu-wiki') %></a>
+                        </li>
+                        <li>
+                            <a href="http://libindic.org/" target="_blank"><%= $.i18n('menu-libindic') %></a>
+                        </li>
+                        <li>
+                            <a href="https://indicproject.org/" target="_blank"><%= $.i18n('menu-indicproject') %></a>
+                        </li>
+                        <li>
+                            <a href="https://smc.org.in/fonts/"><%= $.i18n('menu-fonts') %></a>
+                        </li>
+                        <li>
+                            <a href="https://gitlab.com/smc" target="_blank"><%= $.i18n('menu-git') %></a>
+                        </li>
+                        <li>
+                            <a href="http://lists.smc.org.in/listinfo.cgi/discuss-smc.org.in" target="_blank"><%= $.i18n('menu-list') %></a>
+                        </li>
+                        <li>
+                            <a href="https://webchat.freenode.net/?randomnick=0&channels=smc-project" target="_blank"><%= $.i18n('menu-irc') %></a>
+                        </li>
+                        <li>
+                            <a href="https://matrix.to/#/#smc-project:matrix.org" target="_blank"><%= $.i18n('menu-matrix') %></a>
+                        </li>
+                        <li>
+                            <a href="https://t.me/smc_project" target="_blank"><%= $.i18n('menu-telegram') %></a>
+                        </li>
+                        <li>
+                            <a href="http://dhvani.sourceforge.net/" target="_blank"><%= $.i18n('menu-dhvani') %></a>
+                        </li>
+                        <li>
+                            <a href="http://www.grandham.org/" target="_blank"><%= $.i18n('menu-grandhavivaram') %></a>
+                        </li>
+                        <li>
+                            <a href="https://planet.smc.org.in/" target="_blank"><%= $.i18n('menu-planet') %></a>
+                        </li>
+                        <li>
+                            <a href="https://smc.org.in/code-of-conduct.html"><%= $.i18n('code-of-conduct') %></a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="social-share">
+                    <ul id="social">
+                        <li><a id="social-icon-1" href="https://www.facebook.com/SMC.Project" target="_blank">Facebook</a></li>
+                        <li><a id="social-icon-2" href="https://twitter.com/smcproject" target="_blank">Twitter</a></li>
+                        <li><a id="social-icon-3" href="https://identi.ca/smcproject" target="_blank">Identi.ca</a></li>
+                        <li><a id="social-icon-4" href="https://plus.google.com/114205080648406335851/" target="_blank">Google Plus</a></li>
+                        <li><a id="social-icon-5" href="https://diasp.org/people/71abaf650562c0a9" target="_blank">Diaspora</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div id="title">
+                    <h1 id="title"><%= $.i18n('title') %></h1>
+                </div>
+                <div id="about"><%= $.i18n('about') %></div>
+            </div>
+        </div>
+        <footer>
+            <div class="wrapper">
+                <hr/>
+                <div id="copyleft"><%= $.i18n('copyleft-msg', '<span>&copy;</span>') %></div>
+            </div>
+        </footer>
+    </script>
+</html>
